@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+<div id="ejemplo1">
+  <span v-bind:title="message">
+    ¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
+  </<span>
+</div>
+
+<script type="text/javascript">
+  var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+})
+
+var ejem = new Vue({
+  el:'#ejemplo1',
+  data: {
+     message: 'Pruebas Mensaje de texto' + new Date()
+  }
+})
+</script>
